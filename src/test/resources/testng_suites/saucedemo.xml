@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WebTestSuite">
+    <parameter name="suiteOwner" value="DXL"/>
+    <parameter name="jenkinsJobName" value="Sauce-Demo-Test"/>
+    <parameter name="jenkinsJobType" value="web"/>
+    <parameter name="jenkinsEnvironments" value="DEMO"/>
+    <parameter name="jenkinsEmail" value="demo@zebrunner.com"/>
+
+    <parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression"/>
+
+    <parameter name="jenkinsRegressionMatrix_full_regression" value="browser:chrome"/>
+    <parameter name="jenkinsJobExecutionOrder" value="1"/>
+    <parameter name="jenkinsJobExecutionMode" value="continue"/>
+    <parameter name="jenkinsAutoScreenshot" value="true"/>
+
+    <test name="WebTests">
+        <classes>
+            <class name="com.zebrunner.carina.demo.SauceDemoTest"/>
+        </classes>
+    </test>
+</suite>
